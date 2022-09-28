@@ -29,14 +29,13 @@ const options = {
 
     refs.startBtn.disabled = false;
     chooseDate = selectedDates[0].getTime();
-    console.log('chooseDate в options', chooseDate);
   },
 };
 
-const flatpickr = flatpickr(refs.input, options);
+flatpickr(refs.input, options);
 
 class Timer {
-  constructor({ onTick, chooseDate }) {
+  constructor({ onTick }) {
     this.intervalId = null;
     this.isActive = false;
     this.onTick = onTick;
@@ -51,8 +50,6 @@ class Timer {
 
     this.intervalId = setInterval(() => {
       const currentDate = Date.now();
-      console.log('chooseDate', chooseDate);
-      console.log('currentDate', currentDate);
       const deltaDate = chooseDate - currentDate;
       const time = this.convertMs(deltaDate);
 
