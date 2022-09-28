@@ -36,23 +36,3 @@ img {
 .label {
   font-size: 20px;
 }
-
-button[data-start]:disabled {
-  width: 80px;
-  background-color: tomato;
-  color: #000;
-  font-weight: 600;
-  padding: 8px;
-}
-
-button[data-start] {
-  width: 80px;
-  color: #000;
-  background-color: green;
-  font-weight: 600;
-  padding: 8px;
-}
-
-#datetime-picker {
-  padding: 8px;
-}
