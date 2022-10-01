@@ -54,6 +54,12 @@ class Timer {
       const time = this.convertMs(deltaDate);
 
       this.onTick(time);
+
+      if (deltaDate <= 1000) {
+        clearInterval(this.intervalId);
+        this.isActive = false;
+        refs.startBtn.disabled = true;
+      }
     }, 1000);
   }
 
